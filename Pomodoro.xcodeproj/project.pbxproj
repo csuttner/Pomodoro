@@ -12,9 +12,6 @@
 		F3B81AA6263680810019C559 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3B81AA5263680810019C559 /* Assets.xcassets */; };
 		F3B81AAD263680810019C559 /* Pomodoro WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F3B81AAC263680810019C559 /* Pomodoro WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F3B81AB2263680810019C559 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B81AB1263680810019C559 /* InterfaceController.swift */; };
-		F3B81AB4263680810019C559 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B81AB3263680810019C559 /* ExtensionDelegate.swift */; };
-		F3B81AB6263680810019C559 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B81AB5263680810019C559 /* NotificationController.swift */; };
-		F3B81AB8263680810019C559 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B81AB7263680810019C559 /* ComplicationController.swift */; };
 		F3B81ABA263680810019C559 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3B81AB9263680810019C559 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -68,9 +65,6 @@
 		F3B81AA7263680810019C559 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3B81AAC263680810019C559 /* Pomodoro WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Pomodoro WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3B81AB1263680810019C559 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		F3B81AB3263680810019C559 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		F3B81AB5263680810019C559 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		F3B81AB7263680810019C559 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		F3B81AB9263680810019C559 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3B81ABB263680810019C559 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3B81ABC263680810019C559 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
@@ -120,9 +114,6 @@
 			isa = PBXGroup;
 			children = (
 				F3B81AB1263680810019C559 /* InterfaceController.swift */,
-				F3B81AB3263680810019C559 /* ExtensionDelegate.swift */,
-				F3B81AB5263680810019C559 /* NotificationController.swift */,
-				F3B81AB7263680810019C559 /* ComplicationController.swift */,
 				F3B81AB9263680810019C559 /* Assets.xcassets */,
 				F3B81ABB263680810019C559 /* Info.plist */,
 				F3B81ABC263680810019C559 /* PushNotificationPayload.apns */,
@@ -256,9 +247,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3B81AB6263680810019C559 /* NotificationController.swift in Sources */,
-				F3B81AB8263680810019C559 /* ComplicationController.swift in Sources */,
-				F3B81AB4263680810019C559 /* ExtensionDelegate.swift in Sources */,
 				F3B81AB2263680810019C559 /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
