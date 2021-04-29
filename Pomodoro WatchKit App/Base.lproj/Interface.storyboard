@@ -1,38 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17701" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="17701" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8ms-kN-AdS">
     <device id="watch38"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="17500"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
-        <scene sceneID="aou-V4-d1y">
+        <!--Hosting Controller-->
+        <scene sceneID="QEk-LG-yoS">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Pomodoro_WatchKit_App" customModuleProvider="target">
-                    <items>
-                        <group width="1" alignment="left" layout="vertical" id="YXQ-1G-q89">
-                            <items>
-                                <timer width="136" height="127" alignment="center" verticalAlignment="center" textAlignment="center" id="Vr5-AO-FFn">
-                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
-                                    <calendarUnit key="units" minute="YES" second="YES"/>
-                                </timer>
-                            </items>
-                        </group>
-                        <button width="1" alignment="left" title="Start" id="3tI-Bl-jSG">
-                            <connections>
-                                <action selector="onButtonTapped" destination="AgC-eL-Hgc" id="TvF-up-WU4"/>
-                            </connections>
-                        </button>
-                    </items>
-                    <connections>
-                        <outlet property="button" destination="3tI-Bl-jSG" id="V9N-c0-QCE"/>
-                        <outlet property="timer" destination="Vr5-AO-FFn" id="Nki-uX-n8I"/>
-                    </connections>
-                </controller>
+                <hostingController id="8ms-kN-AdS"/>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="-337" y="151"/>
         </scene>
     </scenes>
 </document>
