@@ -9,7 +9,7 @@
         <!--Hosting Controller-->
         <scene sceneID="QEk-LG-yoS">
             <objects>
-                <hostingController id="8ms-kN-AdS"/>
+                <hostingController id="8ms-kN-AdS" customClass="HostingController" customModule="Pomodoro_WatchKit_Extension"/>
             </objects>
             <point key="canvasLocation" x="-337" y="151"/>
         </scene>

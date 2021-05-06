@@ -8,8 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var timerVal = 5
+    @State var paused = true
+    
     var body: some View {
-        Text("Hello World")
+        VStack {
+            Text("\(timerVal)")
+                .font(.system(size: 40))
+            HStack {
+                Button(action: {
+                    //
+                }, label: {
+                    Text(paused ? "Start" : "Pause")
+                })
+                Button(action: {
+                    //
+                }, label: {
+                    Text("Cancel")
+                })
+            }
+        }
+        
     }
 }
 
