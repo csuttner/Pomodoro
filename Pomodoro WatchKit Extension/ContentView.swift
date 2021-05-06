@@ -8,12 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var timerVal = 5
+    @State var timerVal = 5 * 60
     @State var paused = true
+    
+    var timerValString: String {
+        let minutes = timerVal / 60
+        let seconds = timerVal % 60
+        return seconds < 10 ? "\(minutes):0\(seconds)" : "\(minutes):\(seconds)"
+    }
     
     var body: some View {
         VStack {
-            Text("\(timerVal)")
+            Text(timerValString)
                 .font(.system(size: 40))
                 .onAppear() {
                     Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
