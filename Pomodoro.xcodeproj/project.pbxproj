@@ -11,11 +11,9 @@
 		F3B81AA4263680800019C559 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3B81AA2263680800019C559 /* Interface.storyboard */; };
 		F3B81AA6263680810019C559 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3B81AA5263680810019C559 /* Assets.xcassets */; };
 		F3B81AAD263680810019C559 /* Pomodoro WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F3B81AAC263680810019C559 /* Pomodoro WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		F3B81AB2263680810019C559 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B81AB1263680810019C559 /* InterfaceController.swift */; };
-		F3B81AB4263680810019C559 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B81AB3263680810019C559 /* ExtensionDelegate.swift */; };
-		F3B81AB6263680810019C559 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B81AB5263680810019C559 /* NotificationController.swift */; };
-		F3B81AB8263680810019C559 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B81AB7263680810019C559 /* ComplicationController.swift */; };
 		F3B81ABA263680810019C559 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3B81AB9263680810019C559 /* Assets.xcassets */; };
+		F3E41696263A778A007AA032 /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E41695263A778A007AA032 /* HostingController.swift */; };
+		F3E4169E263A77CF007AA032 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E4169D263A77CF007AA032 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,13 +65,11 @@
 		F3B81AA5263680810019C559 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3B81AA7263680810019C559 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3B81AAC263680810019C559 /* Pomodoro WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Pomodoro WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3B81AB1263680810019C559 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		F3B81AB3263680810019C559 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
-		F3B81AB5263680810019C559 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		F3B81AB7263680810019C559 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
 		F3B81AB9263680810019C559 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3B81ABB263680810019C559 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3B81ABC263680810019C559 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		F3E41695263A778A007AA032 /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		F3E4169D263A77CF007AA032 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,10 +115,8 @@
 		F3B81AB0263680810019C559 /* Pomodoro WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				F3B81AB1263680810019C559 /* InterfaceController.swift */,
-				F3B81AB3263680810019C559 /* ExtensionDelegate.swift */,
-				F3B81AB5263680810019C559 /* NotificationController.swift */,
-				F3B81AB7263680810019C559 /* ComplicationController.swift */,
+				F3E41695263A778A007AA032 /* HostingController.swift */,
+				F3E4169D263A77CF007AA032 /* ContentView.swift */,
 				F3B81AB9263680810019C559 /* Assets.xcassets */,
 				F3B81ABB263680810019C559 /* Info.plist */,
 				F3B81ABC263680810019C559 /* PushNotificationPayload.apns */,
@@ -201,6 +195,7 @@
 					};
 					F3B81AAB263680810019C559 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -256,10 +251,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3B81AB6263680810019C559 /* NotificationController.swift in Sources */,
-				F3B81AB8263680810019C559 /* ComplicationController.swift in Sources */,
-				F3B81AB4263680810019C559 /* ExtensionDelegate.swift in Sources */,
-				F3B81AB2263680810019C559 /* InterfaceController.swift in Sources */,
+				F3E4169E263A77CF007AA032 /* ContentView.swift in Sources */,
+				F3E41696263A778A007AA032 /* HostingController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +401,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DFVB576FM8;
 				INFOPLIST_FILE = "Pomodoro WatchKit Extension/Info.plist";
@@ -420,6 +414,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 7.2;
@@ -430,6 +425,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DFVB576FM8;
 				INFOPLIST_FILE = "Pomodoro WatchKit Extension/Info.plist";
