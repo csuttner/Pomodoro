@@ -19,8 +19,10 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
+            Spacer()
             Text(timerValString)
                 .font(.system(size: 40))
+                .foregroundColor(paused ? .gray : .white)
                 .onAppear() {
                     Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
                         if !self.paused {
@@ -30,16 +32,24 @@ struct ContentView: View {
                         }
                     }
                 }
+            Spacer()
             HStack {
                 Button(action: {
                     paused.toggle()
                 }, label: {
-                    Text(paused ? "Start" : "Pause")
+                    if paused {
+                        Text("Start")
+                            .foregroundColor(.green)
+                    } else {
+                        Text("Pause")
+                            .foregroundColor(.yellow)
+                    }
                 })
                 Button(action: {
                     //
                 }, label: {
                     Text("Cancel")
+                        .foregroundColor(.red)
                 })
             }
         }
