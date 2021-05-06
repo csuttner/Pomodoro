@@ -15,6 +15,13 @@ struct ContentView: View {
         VStack {
             Text("\(timerVal)")
                 .font(.system(size: 40))
+                .onAppear() {
+                    Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
+                        if self.timerVal > 0 {
+                            self.timerVal -= 1
+                        }
+                    }
+                }
             HStack {
                 Button(action: {
                     //
