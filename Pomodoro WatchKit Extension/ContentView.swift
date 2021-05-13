@@ -10,7 +10,8 @@ import SwiftUI
 struct ContentView: View {
     let workTime = 15
     let breakTime = 5
-    
+    let hapticSignal = WKHapticType.notification
+    let interfaceDevice = WKInterfaceDevice()
     @State var timerVal = 15
     @State var paused = true
     @State var working = true
@@ -68,6 +69,7 @@ struct ContentView: View {
             if timerVal > 0 {
                 timerVal -= 1
             } else {
+                interfaceDevice.play(hapticSignal)
                 paused = true
                 working.toggle()
                 started.toggle()
