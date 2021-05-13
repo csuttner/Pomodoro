@@ -8,52 +8,61 @@
 import SwiftUI
 
 struct ContentView: View {
+    let workTime = 15
+    let breakTime = 5
     
     @State var timerVal = 15
     @State var paused = true
-    @State var working = false
+    @State var working = true
     @State var started = false
+    
+    var body: some View {
+        VStack {
+            timerModeText
+            Spacer()
+            timerValText
+            Spacer()
+            buttonStack
+        }
+    }
+    
+    var timerModeText: some View {
+        Text(working ? "Work" : "Break")
+    }
+    
+    var timerValText: some View {
+        Text(timerValString)
+            .font(.system(size: 40))
+            .foregroundColor(paused ? .gray : .white)
+            .onAppear() {
+                Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: timerAction(timer:))
+            }
+    }
     
     var timerValString: String {
         let minutes = timerVal / 60
         let seconds = timerVal % 60
         return seconds < 10 ? "\(minutes):0\(seconds)" : "\(minutes):\(seconds)"
     }
-    
-    var timerModeString: String {
-        return working ? "Break" : "Work"
-    }
-    
-    var body: some View {
-        VStack {
-            Text(timerModeString)
-            Spacer()
-            Text(timerValString)
-                .font(.system(size: 40))
-                .foregroundColor(paused ? .gray : .white)
-                .onAppear() {
-                    Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: timerAction(timer:))
+
+    var buttonStack: some View {
+        HStack {
+            Button(action: pauseAction, label: {
+                if paused {
+                    Text("Start")
+                        .foregroundColor(.green)
+                } else {
+                    Text("Pause")
+                        .foregroundColor(.yellow)
                 }
-            Spacer()
-            HStack {
-                Button(action: pauseAction, label: {
-                    if paused {
-                        Text("Start")
-                            .foregroundColor(.green)
-                    } else {
-                        Text("Pause")
-                            .foregroundColor(.yellow)
-                    }
-                })
-                Button(action: cancelAction, label: {
-                    Text("Cancel")
-                        .foregroundColor(.red)
-                })
-            }
+            })
+            Button(action: cancelAction, label: {
+                Text("Cancel")
+                    .foregroundColor(.red)
+            })
         }
-        
     }
-    
+
     func timerAction(timer: Timer) {
         if !paused {
             if timerVal > 0 {
@@ -69,9 +78,9 @@ struct ContentView: View {
     func pauseAction() {
         if !started {
             if working {
-                timerVal = 5
+                timerVal = workTime
             } else {
-                timerVal = 15
+                timerVal = breakTime
             }
             started = true
         }
@@ -82,6 +91,7 @@ struct ContentView: View {
         paused = true
         started = false
         working = true
+        timerVal = workTime
     }
 }
 
